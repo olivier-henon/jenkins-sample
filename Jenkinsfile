@@ -3,11 +3,13 @@ pipeline {
     agent any
 
     stages {
-        stage('Prepare') { // for display purposes
-            // Get the Maven tool.
-            // ** NOTE: This 'M3' Maven tool must be configured
-            // **       in the global configuration.
-            mvnHome = tool 'M3'
+        stage('Prepare') {
+            steps{
+                // Get the Maven tool.
+                // ** NOTE: This 'M3' Maven tool must be configured
+                // **       in the global configuration.
+                mvnHome = tool 'M3'
+            }
         }
         stage('Build') {
             steps {
