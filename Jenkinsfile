@@ -1,8 +1,8 @@
+def mvnHome
 pipeline {
     agent any
 
     stages {
-        def mvnHome
         stage('Prepare') { // for display purposes
             // Get the Maven tool.
             // ** NOTE: This 'M3' Maven tool must be configured
